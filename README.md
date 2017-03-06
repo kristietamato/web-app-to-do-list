@@ -15,3 +15,6 @@
 * addToDo(toDo)
 * changeToDo(position, newValue)
 * deleteToDo(position)
+
+### Objects
+* Array object
