@@ -3,9 +3,15 @@
 
 **To Do List is a WebApp built on vanilla JavaScript based on Gordon Zhu's course at watchandlearn.com**
 
-## Version 1
+## Notes
+### Version 1
+* stores to dos
+* display to dos
+* add to dos
+* delete to dos
 
-* has a place to store to dos
-* has a way to display to dos
-* has a way to add to dos
-* has a way to delete to dos
+### Functions
+* displayToDos()
+* addToDo(toDo)
+* changeToDo(position, newValue)
+* deleteToDo(position)
