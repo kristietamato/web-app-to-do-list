@@ -1,0 +1,23 @@
+# Ignore Gulp files
+.DS_Store
+*.log
+node_modules
+build
+*.node
+components
+coverage
+*.orig
+.idea
+sandbox
+test/out-fixtures/*
+test/watch-*.txt
+gulp.1
+
+# Ignore Web workflow files
+service-worker.js
+robots.txt
+manifest.webapp
+manifest.json
+humans.txt
+basic.html
+favicon.ico
