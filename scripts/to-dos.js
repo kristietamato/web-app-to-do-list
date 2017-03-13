@@ -1,20 +1,26 @@
 var toDoList = {
-  toDos: ['item 1', 'item 2', 'item 3'],
+  toDos: [],
   displayToDos: function() {
     console.log('My to dos: ', this.toDos);
   },
-  addToDo: function(toDo) {
-    this.toDos.push(toDo);
+  addToDo: function(toDoText) {
+    this.toDos.push({
+      toDoText: toDoText,
+      completed: false
+    });
+    this.displayToDos();
+  },
+  changeToDo: function(position, toDoText) {
+    this.toDos[position].toDoText = toDoText;
+    this.displayToDos();
+  },
+  deleteToDo: function(position) {
+    this.toDos.splice(position, 1);
+    this.displayToDos();
+  },
+  toggleCompleted: function(position) {
+    var toDo = this.toDos[position];
+    toDo.completed = !toDo.completed;
     this.displayToDos();
   }
 };
-
-function changeToDo(position, newValue) {
-  toDos[position] = newValue;
-  displayToDos();
-}
-
-function deleteToDo(position) {
-  toDos.splice(position, 1);
-  displayToDos();
-}

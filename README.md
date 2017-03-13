@@ -10,11 +10,13 @@
 * add to dos
 * delete to dos
 
-### Functions
+### Objects
+* toDoList object that stores to dos array and methods
+* Array list object that stores to dos
+
+### Methods
 * displayToDos()
 * addToDo(toDo)
 * changeToDo(position, newValue)
 * deleteToDo(position)
-
-### Objects
-* Array object
+* toggleCompleted(position)
