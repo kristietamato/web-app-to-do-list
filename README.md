@@ -4,7 +4,7 @@
 **To Do List is a WebApp built on vanilla JavaScript based on Gordon Zhu's course at watchandlearn.com**
 
 ## Notes
-### Version 1
+### Features
 * stores to dos
 * display to dos
 * add to dos
@@ -20,3 +20,6 @@
 * changeToDo(position, newValue)
 * deleteToDo(position)
 * toggleCompleted(position)
+
+## License
+MIT
