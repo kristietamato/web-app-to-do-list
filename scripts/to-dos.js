@@ -61,12 +61,11 @@ var toDoList = {
   }
 };
 
-var displayToDosButton = document.getElementById('display-to-dos-btn');
-displayToDosButton.addEventListener('click', function() {
-  toDoList.displayToDos();
-});
-
-var toggleAllButton = document.getElementById('toggle-all-btn');
-toggleAllButton.addEventListener('click', function() {
-  toDoList.toggleAll();
-});
+var handlers = {
+  displayToDos: function() {
+    toDoList.displayToDos();
+  },
+  toggleAll: function() {
+    toDoList.toggleAll();
+  }
+};
