@@ -91,3 +91,14 @@ var handlers = {
     toDoList.toggleAll();
   }
 };
+
+var view = {
+  displayToDos: function() {
+    var toDosUl = document.querySelector("ul");
+    toDosUl.innerHTML = "";
+    for (var count = 0; count < toDoList.toDos.length; count++) {
+      var toDoLi = document.createElement("li");
+      toDosUl.appendChild(toDoLi);
+    }
+  }
+};
