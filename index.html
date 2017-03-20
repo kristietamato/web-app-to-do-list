@@ -40,7 +40,36 @@
   </head>
   <body>
     <!-- Add your site or app content here -->
-    Hello world!
+    <h1>To Do List</h1>
+    <div>
+      <button id="toggle-all-btn" onclick="handlers.toggleAll()">Toggle all</button>
+    </div>
+    <div>
+      <button id="add-to-do-btn" onclick="handlers.addToDo()">Add</button>
+      <input id="add-to-do-input" type="text"></input>
+    </div>
+
+    <div>
+      <button onclick="handlers.changeToDo()">Change to do</button>
+      <input id="change-to-do-position-input" type="number"></input>
+      <input id="change-to-do-input" type="text"></input>
+    </div>
+
+    <div>
+      <button onclick="handlers.deleteToDo()">Delete</button>
+      <input id="delete-to-do-position-input" type="number"</input>
+    </div>
+
+    <div>
+      <button onclick="handlers.toggleCompleted()">Toggle completed</button>
+      <input id="toggle-completed-position-input" type="number"</input>
+    </div>
+
+    <div>
+      <ul>
+      </ul>
+    </div>
+
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
