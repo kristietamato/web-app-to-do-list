@@ -89,7 +89,14 @@ var view = {
       }
 
       toDoLi.textContent = toDoTextWithCompletion;
+      toDoLi.appendChild(this.createDeleteBtn());
       toDosUl.appendChild(toDoLi);
     }
+  },
+  createDeleteBtn: function() {
+    var deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+    deleteButton.className = "delete-button";
+    return deleteButton;
   }
 };
