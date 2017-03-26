@@ -55,10 +55,8 @@ var handlers = {
     changeToDoInput.value = "";
     view.displayToDos();
   },
-  deleteToDo: function() {
-    var deleteToDoPositionInput = document.getElementById("delete-to-do-position-input");
-    toDoList.deleteToDo(deleteToDoPositionInput.valueAsNumber);
-    deleteToDoPositionInput.value = "";
+  deleteToDo: function(position) {
+    toDoList.deleteToDo(position);
     view.displayToDos();
   },
   toggleCompleted: function() {
@@ -109,6 +107,6 @@ toDosUl.addEventListener("click", function(event) {
 
   // check if elementClicked is a delete button
   if (elementClicked.className === "delete-button") {
-    handlers.deleteToDo(paresInt(elementClicked.parentNode.id));
+    handlers.deleteToDo(parseInt(elementClicked.parentNode.id));
   }
 });
