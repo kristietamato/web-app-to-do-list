@@ -73,9 +73,9 @@ var view = {
   displayToDos: function() {
     var toDosUl = document.querySelector("ul");
     toDosUl.innerHTML = "";
-    for (var count = 0; count < toDoList.toDos.length; count++) {
+
+    toDoList.toDos.forEach(function(toDo, position) {
       var toDoLi = document.createElement("li");
-      var toDo = toDoList.toDos[count];
       var toDoTextWithCompletion = "";
 
       if(toDo.completed) {
@@ -84,11 +84,11 @@ var view = {
         toDoTextWithCompletion = "( ) " + toDo.toDoText;
       }
 
-      toDoLi.id = count;
+      toDoLi.id = position;
       toDoLi.textContent = toDoTextWithCompletion;
       toDoLi.appendChild(this.createDeleteBtn());
       toDosUl.appendChild(toDoLi);
-    }
+    }, this);
   },
   createDeleteBtn: function() {
     var deleteButton = document.createElement("button");
