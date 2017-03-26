@@ -88,6 +88,7 @@ var view = {
         toDoTextWithCompletion = "( ) " + toDo.toDoText;
       }
 
+      toDoLi.id = count;
       toDoLi.textContent = toDoTextWithCompletion;
       toDoLi.appendChild(this.createDeleteBtn());
       toDosUl.appendChild(toDoLi);
@@ -100,3 +101,14 @@ var view = {
     return deleteButton;
   }
 };
+
+var toDosUl = document.querySelector("ul");
+toDosUl.addEventListener("click", function(event) {
+  // get the element that was clicked on
+  var elementClicked = event.target;
+
+  // check if elementClicked is a delete button
+  if (elementClicked.className === "delete-button") {
+    handlers.deleteToDo(paresInt(elementClicked.parentNode.id));
+  }
+});
