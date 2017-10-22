@@ -1,6 +1,4 @@
 # To Do List
-*...yet another to do list app on the Web*
-
 **To Do List is a WebApp built on vanilla JavaScript based on Gordon Zhu's course at watchandlearn.com**
 
 ## Notes
